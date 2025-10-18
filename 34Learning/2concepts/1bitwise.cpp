@@ -8,7 +8,7 @@
 
 // to multiply a no x by 2^k -> x<<k
 // divide  -> x>>k
-r
+
 
 
 // to find x % 2^k of no -> x&((1<<k)-1)
