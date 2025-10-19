@@ -1,9 +1,7 @@
 // lc 189 
 
 
-
-
-// m1 : normally k baar shift  har element ko 
+// m1 : normally k baar shift 1
 
 // class Solution {
 // public:
@@ -77,7 +75,11 @@
 // };
 
 
-// m3: last k store krkr
+// m3: 
+//har element par jo value aayegi voh daaldo seedha
+// given array ke last k elements ek baar store krlo
+// ab last se n-k elements ie n-1 index se k index tak .....i index element ki value mein i-k index wale ki value daaldo
+// ab shuru ke k mein voh last ke k stored daaldo
 
 // class Solution {
 // public:

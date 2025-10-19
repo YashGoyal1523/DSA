@@ -2,7 +2,7 @@
 
 
 
-// method 1 - pichle mein jo kiya tha vhi krna hai bas.....har element ko k baari shift krdo 
+// method 1 - pichle ques mein jo kiya tha vhi krna hai bas k baar krdo yaani uska k baar loop chalado...ie... k baar right shift 1 krdo 
 //// note: ISKO THODA OPTIMISE KAR SKTE HAI
 // note : n shift ke baad toh same hi banjayega... 
 // toh k>=n case k liye thoda change kr skte h
@@ -142,6 +142,8 @@
 
 
 // m4 
+// seedha hi k shift krdo using method jse 1 shift krre pichle ques mein...
+// ie har element par jo value aayegi voh daaldo seedha
 // given array ke last k elements ek baar store krlo
 // ab last se n-k elements ie n-1 index se k index tak .....i index element ki value mein i-k index wale ki value daaldo
 // ab shuru ke k mein voh last ke k stored daaldo
