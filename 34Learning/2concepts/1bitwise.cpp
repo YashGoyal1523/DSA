@@ -50,7 +50,7 @@
 
 
 // tip : bitwise ques mein .... yeh bhi approach dimaag mein rkhna....0 se 31 tak loop chalana and bit by bit krna
-
+//eg lc 1835
 
 
 // Common conversions for CP
