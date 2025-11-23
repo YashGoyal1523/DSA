@@ -1,59 +1,11 @@
 //lc 1262
-//dp[idx][sum] nhi kar payege as sum. out of range of array index jayega
-// class Solution {
-// public:
-//     int solve(int idx,int sum,vector<int>& nums,vector<vector<int>>&dp){
-//         if(idx==nums.size()){
-//             if(sum%3==0) return sum;
-//             return -1e9;
-//         }
-//         if(dp[idx][sum]!=-1) return dp[idx][sum];
 
-//         int take=solve(idx+1,sum+nums[idx],nums);
-//         int nottake=solve(idx+1,sum,nums);
+//dp[idx][sum] se nhi ho payega as sum value index range ke out jaayegi
 
-//         return dp[idx][sum]=max(take,nottake);
-//     }
-//     int maxSumDivThree(vector<int>& nums) {
-//         int n=nums.size();
-//         int idx=0;
-//         int sum=0;
-//         vector<vector<int>>dp(n+1,vector<int>(1e9,-1));
-//         int ans=solve(idx,sum,nums,dp);
-//         return ans;
-//     }
-// };
 
+//https://youtu.be/bKbLIDzLiGQ?si=ETC5G-OFj81iymYa
 
 //dp[idx][sum_mod3] se krege
-
-//NOTE: THIS IS WRONG
-// class Solution {
-// public:
-//     int solve(int idx,int sum,vector<int>& nums,vector<vector<int>>&dp){
-//         if(idx==nums.size()){
-//             if(sum%3==0) return sum;
-//             return INT_MIN;
-//         }
-//         if(dp[idx][sum%3]!=-1) return dp[idx][sum%3];
-
-//         int take=solve(idx+1,sum+nums[idx],nums,dp);
-//         int nottake=solve(idx+1,sum,nums,dp);
-
-//         return dp[idx][sum%3]=max(take,nottake);
-//     }
-//     int maxSumDivThree(vector<int>& nums) {
-//         int n=nums.size();
-//         int idx=0;
-//         int sum=0;
-//         vector<vector<int>>dp(n+1,vector<int>(3,-1)); //dp[idx][sum_mod3]
-//         int ans=solve(idx,sum,nums,dp);
-//         return ans;
-//     }
-// };
-
-//CORRECT
-//https://youtu.be/bKbLIDzLiGQ?si=ETC5G-OFj81iymYa
 
 class Solution {
 public:
