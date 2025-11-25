@@ -62,7 +62,7 @@ for(int i=0;i<n;i++){
 }
 return dec;
 
-//m1.2 bit manipulation
+//m1.2 
     int n=bin.size();
     int dec = 0;
     for (int i=0;i<n;i++) {
