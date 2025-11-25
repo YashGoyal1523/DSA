@@ -7,8 +7,6 @@ int convert(int n){
 
     int decimal=0;
 
-
-
     int i=0;
     while(n>0){
         int bit=n%10;  // first iteration mein binary ka last bit uthaalia ....agle mein fir remaining ka last uthaalege ie original ka second last and so on
@@ -54,7 +52,7 @@ return 0;
 //convert to decimal no
 
 //m1 left to right traverse
-
+//m1.1
 int n=bin.size();
 int power=n-1;
 int dec=0;
@@ -63,6 +61,15 @@ for(int i=0;i<n;i++){
     power--;
 }
 return dec;
+
+//m1.2 bit manipulation
+    int n=bin.size();
+    int dec = 0;
+    for (int i=0;i<n;i++) {
+        dec = (dec << 1) | bin[i];   //or   dec = (dec*2) | bin[i];  or dec = (dec*2) + bin[i];    
+    }
+    return dec;
+
 
 //m2 right to left traverse
 
@@ -75,11 +82,3 @@ for (int i = n - 1; i >= 0; --i) {
 }
 return dec;
 
-//m3 bit manipulation
-
-    int n=bin.size();
-    int dec = 0;
-    for (int i=0;i<n;i++) {
-        dec = (dec << 1) | bin[i];   
-    }
-    return dec;
