@@ -10,7 +10,7 @@
 // slow and fast pointer approach
 // maintain two pointers slow and fast both at head initially
 // jab fast 2 krlega tab slow 1 krega
-// when fast pointer reaches end ie null, slow pointer will be at middle node (floor(n/2)+1th node) (1 based indexing)
+// when fast pointer reaches end ie null, slow pointer will be at middle node (floor(n/2)+1th node) (1 based indexing) (floor(n/2)th node) (0 based indexing) 
 
 #include <bits/stdc++.h>
 using namespace std;
