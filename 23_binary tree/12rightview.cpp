@@ -91,12 +91,12 @@ void rightView(Node* root, int level, vector<int>& v) {
 	return;
 
   if(level == v.size()) {
-	//iska matlab left view ki node milgyi h , store karlo
+	//iska matlab right view ki node milgyi h , store karlo
 	v.push_back(root->data);
   }
  
- rightView(root->right, level+1, v); 
-rightView(root->left, level+1, v);// note right phle and left baadme aayega
+  rightView(root->right, level+1, v); 
+  rightView(root->left, level+1, v);// note right phle and left baadme aayega
   
  return;
 }
