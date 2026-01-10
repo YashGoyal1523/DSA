@@ -29,10 +29,10 @@
 
 
 // queue<TreeNode*> q;
-// int count=0;
+
 // q.push(root);
 // q.push(NULL);
-// count++;
+// int count=1;
 
 // //asli traversal start krete h 
 
