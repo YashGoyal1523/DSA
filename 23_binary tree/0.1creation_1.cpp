@@ -2,9 +2,7 @@
 // linked nodes banani
 
 
-
-
-// 1.manually creation and attachmnent of nodes
+// 1.manually creation and attachment of nodes
 #include<iostream>  
 using namespace std ;
 
