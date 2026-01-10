@@ -4,6 +4,9 @@
 // approach: ya toh starting ending nodes dono root ke left hogi,ya dono right,ya ek left ek right
 // so left case recursion se lo, right case recursion se lo , left right recursion se lo
 
+//proper sochne ka tarika : har node pe dekhre ki ..agar usko turning pt maane path ka toh usse max kya hoga....sabka max lelo
+
+
 // int height(TreeNode* root) {
 // 	//base case
 // 	if(root == NULL ) {

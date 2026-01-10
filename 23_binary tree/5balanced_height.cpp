@@ -4,6 +4,8 @@
 
 // recursion use krne k liye sochne ki approach: tree will be balanced if root node is balanced,uska left side is balanced(use recursion) , uska right side is balanced(use recursion)
 
+// proper sochne ka tarika : har node pe validate krre
+
 // int height(TreeNode* root) {
 // 	//base case
 // 	if(root == NULL ) {
