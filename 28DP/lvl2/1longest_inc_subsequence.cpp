@@ -266,3 +266,60 @@
 
 // tc o(n^2)
 // sc o(n)
+
+
+
+//another variant of lis
+//find lis such that bitwise and of sequence is not 0
+
+//we know for the bitwise AND of a subsequence to be non-zero, there must be at least one bit position that is set (1) in every single number chosen for that subsequence.
+//so approach is that
+//ham har bit pos ke liye ans nikalege ie har bit pos ke liye lis nikalege jisme voh bit set ho and sabme se max lelege....
+//har bit ke liye array ko filter krenge jaha vo bit set h yaani ek filtered array banalege jisme elements hoge jinme voh bit set hai and fir us filtered array pe lis lgayenge
+// saari bit positions k liye krke sabme se max lenge
+
+
+
+class Solution {
+public:
+
+        int LIS(vector<int>& num ) {
+        vector<int> ans;
+   
+        ans.push_back(num[0]);  
+
+        for(int i=1; i<num.size(); i++) {
+            if(num[i] > ans.back()) {
+                ans.push_back(num[i]);
+            }
+            else {
+               
+                int index = lower_bound(ans.begin(), ans.end(), num[i]) - ans.begin();
+                
+                ans[index] = num[i];
+            }
+        }
+        return ans.size();
+    }
+
+    
+
+    int longestSubsequence(vector<int>& nums) {
+        int maxi = 0;
+        
+        for (int b = 0; b <= 31; ++b) {
+            vector<int> newnums;
+            for (int i=0;i<nums.size();i++) {
+                int x=nums[i];
+                if ((x >> b) & 1) {
+                    newnums.push_back(x);
+                }
+            }           
+            if (newnums.size()>0) {
+                maxi = max(maxi,LIS(newnums));
+            }
+        }
+        
+        return maxi;
+    }
+};
