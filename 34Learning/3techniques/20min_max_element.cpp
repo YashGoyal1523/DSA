@@ -1,5 +1,5 @@
 // suppose we are moving pointers inside an array like in variable sliding window technique and we want to maintain min max element of subarray
-// for this we can use set data structure as it is implemented as balanced binary search tree and it maintains sorted order of elements and we can get min max element in O(1) time and insertion and deletion in O(logn) time 
+// for this we can use set data structure as it is implemented as balanced binary search tree and it maintains sorted order of elements and we can get min max element in O(1) time (first last element) and insertion and deletion in O(logn) time 
 // if elements are not unique we can use multiset as it allows duplicate elements and also maintains sorted order of elements and we can get min max element in O(1) time and insertion and deletion in O(logn) time
 
 
