@@ -168,3 +168,8 @@ return 0;
 }
 
 
+//sorting vector :
+// sort(v.begin(),v.end()) : sorts in ascending order
+// sort(v.begin(),v.end(),greater<int>()) : sorts in descending order
+//or
+// sort(rbegin(v),rend(v)) : sorts in descending order
