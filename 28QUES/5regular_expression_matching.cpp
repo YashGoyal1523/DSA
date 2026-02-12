@@ -1,5 +1,4 @@
 //lc 10
-
 //somewhat similar to wildcard matching leet 40
 class Solution {
 public:
@@ -24,20 +23,32 @@ public:
         int ans;
         //agar p ka next * hai
         if((j<p.size()-1)&&p[j+1]=='*'){ 
-            //curr matches or is .
-            if(p[j]==s[i]||p[j]=='.'){
-                //zero time repeat
-                int option1=rec(s,p,i,j+2);
-                //one time repeat
-                int option2=rec(s,p,i+1,j);
+            // //curr matches or is .
+            // if(p[j]==s[i]||p[j]=='.'){
+            //     //zero time repeat
+            //     int option1=rec(s,p,i,j+2);
+            //     //one time repeat
+            //     int option2=rec(s,p,i+1,j);
 
-                ans=option1||option2;
+            //     ans=option1||option2;
+            // }
+            // else{
+            // //no match
+            // //repeat zero time
+            // ans=rec(s,p,i,j+2);
+            // }
+
+            //or
+
+            //repeat zero time 
+            int option1=rec(s,p,i,j+2);
+            //repeat one time (only if it matches or is .)
+            int option2=false;
+            if(p[j]==s[i]||p[j]=='.'){
+                option2=rec(s,p,i+1,j);
             }
-            else{
-            //no match
-            //repeat zero time
-            ans=rec(s,p,i,j+2);
-            }
+            ans=option1||option2;
+
         }
         else if(s[i]==p[j]||p[j]=='.'){ // char match ya p ka char is .
             ans=rec(s,p,i+1,j+1);
