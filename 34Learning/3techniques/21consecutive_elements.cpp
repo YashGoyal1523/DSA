@@ -1,11 +1,11 @@
-// observe how we are moving the pointer i
+// observe how we are moving the pointer i to track consecutive elements
 
 
 //lc 696 count binary substrings
 
 // 000..0111..1  or  111..1000...0 has min(cnt0,cnt1) valid subarrays
 
-//likhne ka tarika 1
+//likhne ka tarika 1 
 
 // class Solution {
 // public:
