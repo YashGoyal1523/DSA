@@ -68,4 +68,3 @@
 // segmented sieve is used when prime are to be found in n1 se n2 (1<=n1,n2) (works in 1<=n1,n2 only)
 
 
-
