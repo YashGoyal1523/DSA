@@ -274,9 +274,9 @@ return 0;
 
 //formulae using rotate function
 
- // Left rotate the vector by 2 positions
-    rotate(v.begin(), v.begin() + 2, v.end());
+ // Left rotate the vector by k positions
+    rotate(v.begin(), v.begin() + k, v.end());
 
    // Right rotate the vector by 2 positions
-    rotate(v.rbegin(), v.rbegin() + 2, v.rend());  
+    rotate(v.rbegin(), v.rbegin() + k, v.rend());  
 
