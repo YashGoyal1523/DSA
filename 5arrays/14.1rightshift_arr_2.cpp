@@ -271,3 +271,12 @@ return 0;
 // use effective index
 // new_index=(curr_index+k)%n;
 
+
+//formulae using rotate function
+
+ // Left rotate the vector by 2 positions
+    rotate(v.begin(), v.begin() + 2, v.end());
+
+   // Right rotate the vector by 2 positions
+    rotate(v.rbegin(), v.rbegin() + 2, v.rend());  
+
