@@ -6,4 +6,4 @@
 // n<=10^8 -> o(n)
 // n>10^8 -> o(logn) or o(1)
 
-// tip : ques jab o(n) mein krna ho...toh approach sochne ke liye iss way mein bhi dekh skte ki har index pe kuch processing krni hai 
+// tip : ques jab o(n) mein krna ho...toh yaad rkhna... approach sochne ke liye iss way mein bhi dekh skte ki har index pe kuch processing krni hai 
