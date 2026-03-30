@@ -23,15 +23,10 @@ int gcd_1(int a,int b){
 
 // gcd - using euclid algorithm 
 
+//subtraction version
+
 int gcd_2(int a,int b){
-    
-    if(a==b) return a;
 
-    //gcd(a, 0) = |a|, for a ≠ 0, since any number is a divisor of 0, and the greatest divisor of a is |a|.
-    if (a==0) return b;
-    if (b==0) return a;
-
-// euclid 
     while(a>0&&b>0){
         if (a>b)
         {
@@ -40,6 +35,15 @@ int gcd_2(int a,int b){
         else b=b-a;
     }
     return a==0? b:a;
+}
+
+//modulo version
+int gcd_3(int a, int b) {
+    while (b != 0) {
+        a = a % b;
+        swap(a, b);
+    }
+    return a;
 }
 
 int main()
@@ -51,5 +55,9 @@ int main()
 return 0;
 }
 
+
+
+
+// gcd(x, y, z) = gcd(gcd(x, y), gcd(y, z))
 
 
