@@ -1,11 +1,12 @@
-// tip : 'stream' wale ques mein har instant ka ans hota
 
 // Median in a stream
+
+//find median at every instance
 
 // median - ascending order mein (n elements) : n/2+1 th element (if n is odd) , n/2 th and n/2+1 th element ka avg (if n is even)
 
 
-// bruteforce- baar baar sort krte jao and nikalte jao : not good .....baar baar nlogn lagega
+// bruteforce- numbers ki list rkho.....baar baar sort krte jao and nikalte jao : not good .....baar baar nlogn lagega
 
 
 // better
