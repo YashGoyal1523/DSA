@@ -57,6 +57,6 @@ int main() {
 }
 
 //note: agar isi mein do middle nodes m piche wala lene hota toh fast wala jab last node pe hota tab uthalete slow ko ....so...dono jagah fast->next krlege
-
+//note: agar mid node ke piche wala node chahiye toh fast pointer ko initially head->next->next se start krdo.uske baad normal approach ...so jab fast pointer null pe pahunchega tab slow pointer middle ke piche wala node pe hoga
 // note : n/3 (⌊n/3⌋ + 1 th node (1 based indexing)) ke liye bhi same approach use kr skte h bas fast pointer ko 3 steps krwana hoga instead of 2 steps....jab fast 3 steps krega tab slow 1 step krega....jab fast end pahunchega tab slow required pe pahuncha hoga
 // n/k -> fast by k then slow by 1
