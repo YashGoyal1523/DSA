@@ -29,7 +29,7 @@ void mergeKSortedArrays(vector<vector<int> >arr, int k , vector<int> &ans) {
     // first elements daaldo
     for(int row = 0; row < k; row++) {
       int element = arr[row][0];
-      //vector<int> temp = {element, row, 0};
+      //vector<int> temp = {element, row, 0}; // last 0 is column index of that element in that row
       vector<int> temp(3);
       temp[0] = element;
       temp[1] = row;
