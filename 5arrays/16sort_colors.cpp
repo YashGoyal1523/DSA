@@ -84,7 +84,7 @@ int main()
 // }
 
 // // NOTE:
- // // yeh galat haii as jab 2 aara and usko swap krre toh agar other element is 1 ya 2 toh dikkat hojayegi as traversing index toh aage chala jaayega fir voh swapped 1 ya 2 vhi rehjayega and dikkat de skta hai....toh yeh thik krne k liye 2 par updation nhi chahie traversing index ka and yeh while loop se hoga as for mein updation rok nhi skte...
+ // // yeh galat haii as jab 2 aara and usko swap krre toh agar other element is 0 ya 2 toh dikkat hojayegi as traversing index toh aage chala jaayega fir voh swapped 0 ya 2 vhi rehjayega and dikkat de skta hai....toh yeh thik krne k liye 2 par updation nhi chahie traversing index ka and yeh while loop se hoga as for mein updation rok nhi skte...
 
 // correct for swap:  DUTCH NATIONAL FLAG ALGO
 
