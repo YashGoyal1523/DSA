@@ -1,5 +1,5 @@
 //lc 81 (can be duplicate eleemnts)
-
+// pichle method mein nums[s]==nums[mid] mein dikkt hojayegi
 // same to pichla bas add a step of removing duplicates from left and right in while loop in finding pivot
 // https://youtu.be/eneo_XPUEj0?si=iIr3YdaDqxWTkevn
 
