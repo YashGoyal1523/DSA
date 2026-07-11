@@ -3,6 +3,7 @@
 
 //pivot element : max element in a rotated and sorted array (sorted array mein right shifts krdie ) (unique elements)
 
+// array rotation is guranted
 
 // linear search :o(n)
 // sort :o(nlogn)
@@ -87,7 +88,12 @@ int pivotidx(vector<int>& nums) {
 
 
 
-
+// note
+//this method works for when array is rotated pakka
+// agar ese hota ki array not rotated bhi ho skta fir yeh galat hoga
+// toh add krna pdega check uss case mein fn starting mein hi
+// if (nums[s] <= nums[e])
+//        return e;  // last element is the pivot in this case, as the array is not rotated.
 
 
 
