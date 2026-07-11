@@ -32,7 +32,7 @@ while (s<=e)
    return mid-1;
     else if (arr[s]>arr[mid])   // pivot ke right h , left chlo 
     e=mid-1;
-    else // arr[s]<arr[mid]   // pivot ke left h , right chlo
+    else   // pivot ke left h , right chlo
     s=mid+1;
      
 }
@@ -125,7 +125,7 @@ while (s<=e)
    return mid-1;
     else if (nums[s]>nums[mid])  // pivot ke right h , left chlo
     e=mid-1;
-    else   // nums[s]<nums[mid]   // pivot ke left h , right chlo
+    else     // pivot ke left h , right chlo
     s=mid+1;
      
 }
@@ -196,7 +196,7 @@ int pivotidx(vector<int>& nums) {
         if (nums[s] < nums[mid]) {
             // Pivot must be in right half
             s = mid + 1;
-        } else { // nums[s]>nums[mid]
+        } else { 
             // Pivot must be in left half
             e = mid - 1;
         }
