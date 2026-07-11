@@ -131,4 +131,4 @@ int pivotidx(vector<int>& nums) {
     return s;
 }
 
-//note: not sorted m yeh kaam nh krega and koi early check bhi nhi h jse unique wale m daala tha
+//note: not rotated m yeh kaam nh krega and koi early check bhi nhi h jse unique wale m daala tha
