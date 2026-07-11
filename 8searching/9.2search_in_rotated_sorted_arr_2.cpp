@@ -1,6 +1,6 @@
 //lc 81 (can be duplicate eleemnts)
 
-// pichle method (unique elements case) mein nums[s]==nums[mid] mein dikkt hojayegi
+// pichle method (unique elements case) mein nums[s]==nums[mid], s!=mid  mein dikkt hojayegi
 // same to pichla bas add a step of removing duplicates from left and right in while loop in finding pivot
 // https://youtu.be/eneo_XPUEj0?si=iIr3YdaDqxWTkevn
 
@@ -35,7 +35,7 @@ while (s<=e)
    return mid-1;
     else if (nums[s]>nums[mid])  // pivot ke right h , left chlo
     e=mid-1;
-    else   // nums[s]<nums[mid]  // pivot ke left h , right chlo
+    else   // pivot ke left h , right chlo
     s=mid+1;
      
 }
@@ -117,7 +117,7 @@ int pivotidx(vector<int>& nums) {
         if (nums[s] < nums[mid]) {
             // Pivot must be in right half
             s = mid + 1;
-        } else { // nums[s]>nums[mid]
+        } else { 
             // Pivot must be in left half
             e = mid - 1;
         }
