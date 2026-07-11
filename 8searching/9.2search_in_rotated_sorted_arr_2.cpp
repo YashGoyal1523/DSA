@@ -1,8 +1,12 @@
-//lc 81 (can be duplicate eleemnts)
+//lc 81 (can be duplicate eleemnts) 
 
-// pichle method (unique elements case) mein nums[s]==nums[mid], s!=mid  mein dikkt hojayegi eg [0, 0, 1, 0]
+// pichle method (unique elements case) mein nums[s]==nums[mid],s!=mid mein dikkt hojayegi eg [0, 0, 1, 0]
 // same to pichla bas add a step of removing duplicates from left and right in while loop in finding pivot
 // https://youtu.be/eneo_XPUEj0?si=iIr3YdaDqxWTkevn
+
+
+//rotated h pakka
+
 
 class Solution {
 public:
@@ -35,7 +39,7 @@ while (s<=e)
    return mid-1;
     else if (nums[s]>nums[mid])  // pivot ke right h , left chlo
     e=mid-1;
-    else   // pivot ke left h , right chlo
+    else     // pivot ke left h , right chlo
     s=mid+1;
      
 }
@@ -127,9 +131,4 @@ int pivotidx(vector<int>& nums) {
     return s;
 }
 
-// note
-//this method works for when array is rotated pakka
-// agar ese hota ki array not rotated bhi ho skta fir yeh galat hoga
-// toh add krna pdega check uss case mein fn starting mein hi
-// if (nums[s] <= nums[e])
-//        return e;  // last element is the pivot in this case, as the array is not rotated.
+//note: not sorted m yeh kaam nh krega and koi early check bhi nhi h jse unique wale m daala tha
