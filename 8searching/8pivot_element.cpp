@@ -35,7 +35,7 @@ while (s<=e)
    return mid-1;
     else if (arr[s]>arr[mid])
     e=mid-1;
-    else // arr[s]<arr[mid]
+    else 
     s=mid+1;
      
 }
@@ -76,7 +76,7 @@ int pivotidx(vector<int>& nums) {
         if (nums[s] < nums[mid]) {
             // Pivot must be in right half
             s = mid + 1;
-        } else { // nums[s]>nums[mid]
+        } else { 
             // Pivot must be in left half
             e = mid - 1;
         }
