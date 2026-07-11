@@ -1,6 +1,6 @@
 //lc 81 (can be duplicate eleemnts)
 
-// pichle method (unique elements case) mein nums[s]==nums[mid], s!=mid  mein dikkt hojayegi
+// pichle method (unique elements case) mein nums[s]==nums[mid], s!=mid  mein dikkt hojayegi eg [0, 0, 1, 0]
 // same to pichla bas add a step of removing duplicates from left and right in while loop in finding pivot
 // https://youtu.be/eneo_XPUEj0?si=iIr3YdaDqxWTkevn
 
