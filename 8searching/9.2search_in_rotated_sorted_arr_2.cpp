@@ -126,3 +126,9 @@ int pivotidx(vector<int>& nums) {
     return s;
 }
 
+// note
+//this method works for when array is rotated pakka
+// agar ese hota ki array not rotated bhi ho skta fir yeh galat hoga
+// toh add krna pdega check uss case mein fn starting mein hi
+// if (nums[s] <= nums[e])
+//        return e;  // last element is the pivot in this case, as the array is not rotated.
