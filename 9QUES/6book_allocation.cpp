@@ -66,7 +66,7 @@
 //             high = mid - 1;
 //         }
 //     }
-//     return ans;
+//     return ans;    // note: isme yeh initial -1 wali condition isme cover nhi hogi balki iske bina galat hojayegaa yeh code.....as uske bina < wale m kuch keh nhi skte the as hume pata nhi ki books sufficient h ya nhi for atleast 1 to students and galat shi dono true ajayege
 // }
 
 
