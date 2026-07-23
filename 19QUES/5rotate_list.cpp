@@ -1,5 +1,8 @@
 //lc 61
-//approach
+
+//m1 Copy values to vector, rotate, write back
+
+// m2 change links
 // if n is no of total nodes then after every n shifts list becomes same to original
 // find effective no of shifts : k % n  (k now becomes in range [0,n-1])
 // if effective shift is 0 then list remains same
