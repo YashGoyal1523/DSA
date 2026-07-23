@@ -51,38 +51,41 @@ node* intersectionPresent(node* head1,node* head2) {
 // badi choti h toh ....choti wale mein normally ptr start mein rkho  and badi wali mein ptr start se diff in length steps aage bhadado .......ab simultaeous traverse kro and check krte jao
 class Solution {
 public:
-
-int getDifference(ListNode* head1,ListNode* head2) {
-     int len1 = 0,len2 = 0;
-        while(head1 != NULL || head2 != NULL) {
-            if(head1 != NULL) {
-                ++len1; head1 = head1->next;
-            }
-            if(head2 != NULL) {
-                ++len2; head2 = head2->next;
-            }
-            
+    int getLength(ListNode* head) {
+        int len = 0;
+        while (head) {
+            len++;
+            head = head->next;
         }
-        return len1-len2;//if difference is neg-> length of list2 > length of list1 else if 0 then barabar else if positive then list1 badi
-}
-
+        return len;
+    }
 
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        int diff = getDifference(headA,headB);
-        if(diff < 0) { //list B badi h
-            while(diff++ != 0) headB = headB->next; 
+
+        int lenA = getLength(headA);
+        int lenB = getLength(headB);
+
+        ListNode* A = headA;
+        ListNode* B = headB;
+
+        int diff = abs(lenA - lenB);
+
+        if (lenA > lenB) {
+            while (diff--)
+                A = A->next;
+        } else {
+            while (diff--)
+                B = B->next;
         }
-        else if(diff>0) { // list A badi h
-            while(diff-- != 0) headA = headA->next;
+
+        while (A && B) {
+            if (A == B)
+                return A;
+
+            A = A->next;
+            B = B->next;
         }
-        //ab dono heads se aage length barabar h
-        //ab travser kro
-        while(headA != NULL) {
-            if(headA == headB) return headA;
-            headB = headB->next;
-            headA = headA->next;
-        }
-        //no intersection
+
         return NULL;
     }
 };
