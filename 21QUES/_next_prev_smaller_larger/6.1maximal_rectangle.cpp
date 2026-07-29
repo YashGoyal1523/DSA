@@ -122,6 +122,9 @@
 // striver
 
 // m3
+//stack
+//// width=nextSmallerIdx-prevSmallerIdx-1
+//one pass
 
 // https://youtu.be/X0X6G-eWgQ8?si=RPERF4NF0AloNLRl
 // https://youtu.be/jC_cWLy7jSI?si=VXcI4Z7rIVjI6KdZ
