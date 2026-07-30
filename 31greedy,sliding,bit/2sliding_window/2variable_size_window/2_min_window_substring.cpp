@@ -78,6 +78,9 @@
 // https://youtu.be/3Bp3OVD1EGc?si=rLIbkpCRq-9JV2Kl
 //T.C : O(m+n) where m = length of s and n = length of t
 //S.C : O(n)
+
+//normal expand minimise 
+//valid tak expand ... try to minimise jab tak valid milta rhe.. unvalid milne par fir expand and so on
 class Solution {
 public:
     string minWindow(string s, string t) {
