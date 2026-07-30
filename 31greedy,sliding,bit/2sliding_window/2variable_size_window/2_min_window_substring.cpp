@@ -85,7 +85,8 @@ class Solution {
 public:
     string minWindow(string s, string t) {
         int n = s.length();
-        map<char, int> mp;
+        map<char, int> mp;  // map represents the remaining requirement.
+        
         
         for(char &ch : t) {
             mp[ch]++;
