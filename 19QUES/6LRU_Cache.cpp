@@ -131,13 +131,13 @@ public:
     void put(int key, int value) {
 
         if (cache.count(key)) {
-            dll.erase(cache[key]);
+            cache[key]->second = value; // Update value
+            makeMostRecentlyUsed(key);
         } else {
+            dll.push_front({key, value});
+            cache[key] = dll.begin();
             capacity--;
         }
-
-        dll.push_front({key, value});
-        cache[key] = dll.begin();
 
         if (capacity < 0) {
             cache.erase(dll.back().first);
