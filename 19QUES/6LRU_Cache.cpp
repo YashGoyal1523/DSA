@@ -100,7 +100,52 @@ public:
     }
 };
 
+// or
+//list mein hi key,value store krlo
 
+class LRUCache {
+public:
+    list<pair<int, int>> dll; // stores (key, value)
+    unordered_map<int, list<pair<int, int>>::iterator> cache; // key -> iterator
+    int capacity;
+
+    LRUCache(int capacity) {
+        this->capacity = capacity;
+    }
+
+    void makeMostRecentlyUsed(int key) {
+        auto node = *cache[key];      // Copy (key, value)
+        dll.erase(cache[key]);        // Remove old node
+        dll.push_front(node);         // Insert at front
+        cache[key] = dll.begin();     // Update iterator
+    }
+
+    int get(int key) {
+        if (!cache.count(key))
+            return -1;
+
+        makeMostRecentlyUsed(key);
+        return cache[key]->second;
+    }
+
+    void put(int key, int value) {
+
+        if (cache.count(key)) {
+            dll.erase(cache[key]);
+        } else {
+            capacity--;
+        }
+
+        dll.push_front({key, value});
+        cache[key] = dll.begin();
+
+        if (capacity < 0) {
+            cache.erase(dll.back().first);
+            dll.pop_back();
+            capacity++;
+        }
+    }
+};
 
 
 
