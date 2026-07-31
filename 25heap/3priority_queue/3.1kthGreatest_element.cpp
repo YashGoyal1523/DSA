@@ -1,6 +1,8 @@
 // given an array, find kth greatest element 
 
 
+
+
 // first k elements se ek (min heap) min priority queue banalo , for rem element : if element>top element -> top ko pop,element ko push in pq , sabke liye krne ke baad pq mein shuru ke k greatest elements present hoge, uska top element will be kth greatest element : tc o(nlogk) sc o(k)
 int getKthGreatestElement(int arr[], int n, int k) {
         //create min heap
@@ -21,7 +23,7 @@ int getKthGreatestElement(int arr[], int n, int k) {
         return ans;
 }
 
-// alter...ek ek krke elements daalte jao min heap m ...if size>k hojaye then pop (maintain maximum k elements in heap)...last m top element is ans
+// alter...ek ek krke elements daalte jao min heap m ...if size>k hojaye then pop (maintain maximum k elements in heap)...last m heap mein k greatest elements hoge, uska top element will be kth greatest : tc o(nlogk) sc o(k)
 
 
 //lc 215
