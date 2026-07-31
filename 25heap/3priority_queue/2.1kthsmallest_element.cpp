@@ -27,4 +27,4 @@ int getKthSmallestElement(int arr[], int n, int k ) {
 }
 
 // m3 ka alter...
-// max heap m ek ek krke elements daalte jao and if size>k hojaye then pop (ie maintain maximum k elements in heap)...last m top element is ans : tc o(nlogk) sc o(k)
+// max heap m ek ek krke elements daalte jao and if size>k hojaye then pop (ie maintain maximum k elements in heap)...last m heap mein k smallest elements hoge, uska top element will be kth smallest : tc o(nlogk) sc o(k)
