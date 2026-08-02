@@ -25,7 +25,7 @@ int tabu(int n){
 int main()
 { int n;
     cin>>n;
-    int ans=tabu(n);
+    int ans=tabu(n); //parameter m kuch alag nhi 
     cout<<ans;
 
 return 0;
