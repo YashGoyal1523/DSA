@@ -27,7 +27,7 @@
 #include<iostream>
 using namespace std ;
 
-int rec_mem(int n,vector<int>&dp ){
+int rec_mem(int n,vector<int>&dp ){ // by ref lena dp
     // base case
     if(n==0) return 0;
     if(n==1) return 1;
@@ -40,7 +40,7 @@ int rec_mem(int n,vector<int>&dp ){
     // recursive 
     // 2.store and return using dp array
 
-    dp[n]=rec_mem(n-1,dp)+rec_mem(n-2,dp);              // note: rec ke parameter wale variable ko index leke ...uspe storing and usko returning 
+    dp[n]=rec_mem(n-1,dp)+rec_mem(n-2,dp);    //parameter m dp pass          // note: rec ke parameter wale variable ko index leke ...uspe storing and usko returning 
     return dp[n];  
     // // or
     // int ans=rec_mem(n-1,dp)+rec_mem(n-2,dp);             
@@ -60,7 +60,7 @@ int main()
     // 1. create dp array
     vector<int>dp(n+1,-1);   //dp[i] stores the ans of i   //n+1 size ka lagega as then index n tak aayega         //note:dp array ke index recursion ke changing parameter ka banega 
 
-    int ans=rec_mem(n,dp);
+    int ans=rec_mem(n,dp); //parameter m dp pass
 
     cout<<ans<<endl; 
 
