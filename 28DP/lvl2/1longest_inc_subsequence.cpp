@@ -146,22 +146,22 @@
 // public:
    
 //     int solveUsingBS(vector<int>& num ) {
-//         vector<int> ans;
+//         vector<int> temp;
 //         //initial state
-//         ans.push_back(num[0]);  // increasing order bananeyeg isme
+//         temp.push_back(num[0]);  
 
 //         for(int i=1; i<num.size(); i++) {
-//             if(num[i] > ans.back()) {
-//                 ans.push_back(num[i]);
+//             if(num[i] > temp.back()) {
+//                 temp.push_back(num[i]);
 //             }
 //             else {
-//                 //just bada number exist krta hai
-//                 int index = lower_bound(ans.begin(), ans.end(), num[i]) - ans.begin();
+//                 //equal ya just bada number 
+//                 int index = lower_bound(temp.begin(), temp.end(), num[i]) - temp.begin();
 //                 //replace 
-//                 ans[index] = num[i];
+//                 temp[index] = num[i];
 //             }
 //         }
-//         return ans.size();
+//         return temp.size(); // note: temp will not be the actual longest increasing subsequence, but its size will be the length of the longest increasing subsequence
 //     }
 
 //     int lengthOfLIS(vector<int>& nums) {
@@ -180,18 +180,19 @@
 
 // // L Decreasing S
 //  int solveUsingBS(std::vector<int>& num) {
-//         std::vector<int> ans;
-//         ans.push_back(num[0]);
+//         std::vector<int> temp;
+//         temp.push_back(num[0]);
 
 //         for(int i = 1; i < num.size(); i++) {
-//             if(num[i] < ans.back()) {
-//                 ans.push_back(num[i]);
+//             if(num[i] < temp.back()) {
+//                 temp.push_back(num[i]);
 //             } else {
-//                 int index = std::upper_bound(ans.begin(), ans.end(), num[i], std::greater<int>()) - ans.begin();
-//                 ans[index] = num[i];
+//                 // just bada number 
+//                 int index = std::upper_bound(temp.begin(), temp.end(), num[i], std::greater<int>()) - temp.begin();
+//                 temp[index] = num[i];
 //             }
 //         }
-//         return ans.size();
+//         return temp.size();
 //     }
 
 
