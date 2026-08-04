@@ -64,7 +64,7 @@
 //         int curr = 0; // index
 //         int prev = -1; // index
 //         int n = nums.size();
-//         vector<vector<int> > dp(n+1, vector<int>(n, -1)); // prev ke liye n liya as prev curr ke  piche hi hoga..worst case ek piche..vhi lege
+//         vector<vector<int> > dp(n+1, vector<int>(n, -1)); //curr n tak jaayegi toh n+1 size // prev ke liye n liya as prev curr ke  piche hi hoga..worst case ek piche..ie n-1 so n ....vse toh index shifting krre toh yeh n tak jaa skti toh n+1 lena chahie par yha base case m hi return hojayega toh not needed...tabu m lena hoga
 //         int ans = solveUsingMem(nums,curr,prev,dp);
 //         return ans;
 //     }
