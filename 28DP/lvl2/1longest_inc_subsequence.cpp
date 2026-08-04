@@ -35,40 +35,40 @@
 
 
 
-// class Solution {
-// public:
+class Solution {
+public:
 
  
-//     int solveUsingMem(vector<int>& num, int curr, int prev, vector<vector<int> >& dp) {
-//        //base case
-//        if(curr == num.size() ) {
-//            return 0;
-//        } 
-//        //if ans already exists
-//        if(dp[curr][prev+1] != -1 ) {    // index shifting krni padi prev mein ....as -1 bhi ho skta yeh and -1 index doesnt exist..+1 krlia......ab ek jagah dp ke col m +1 krdia toh jaha jaha dp aara ho uske col mein +1 krdena ...har jagah krna mat bhulna
-//            return dp[curr][prev+1];   // // index shifting needed...+1
-//        }
+    int solveUsingMem(vector<int>& num, int curr, int prev, vector<vector<int> >& dp) {
+       //base case
+       if(curr == num.size() ) {
+           return 0;
+       } 
+       //if ans already exists
+       if(dp[curr][prev+1] != -1 ) {    // index shifting krni padi prev mein ....as -1 bhi ho skta yeh and -1 index doesnt exist..+1 krlia......ab ek jagah dp ke col m +1 krdia toh jaha jaha dp aara ho uske col mein +1 krdena ...har jagah krna mat bhulna
+           return dp[curr][prev+1];   // // index shifting needed...+1
+       }
 
-//        int include = 0;
-//        if(prev == -1 || num[curr] > num[prev] ) { // idhar wale mein +1 ki need nhi as || ke baad h and prev -1 ka mtlb  phle wali true nikl gyi... toh yeh check hogi hi nhi seedha andar ghusegi
-//            include = 1 + solveUsingMem(num, curr+1, curr,dp);
-//        }
-//        int exclude  = 0 + solveUsingMem(num, curr+1, prev,dp);    
+       int include = 0;
+       if(prev == -1 || num[curr] > num[prev] ) { // idhar wale mein +1 ki need nhi as || ke baad h and prev -1 ka mtlb  phle wali true nikl gyi... toh yeh check hogi hi nhi seedha andar ghusegi
+           include = 1 + solveUsingMem(num, curr+1, curr,dp);
+       }
+       int exclude  = 0 + solveUsingMem(num, curr+1, prev,dp);    
 
-//        dp[curr][prev+1] = max(include, exclude);     // index shifting needed...+1
+       dp[curr][prev+1] = max(include, exclude);     // index shifting needed...+1
 
-//        return dp[curr][prev+1];   // index shifting needed...+1
-//     }
+       return dp[curr][prev+1];   // index shifting needed...+1
+    }
 
-//     int lengthOfLIS(vector<int>& nums) {
-//         int curr = 0; // index
-//         int prev = -1; // index
-//         int n = nums.size();
-//         vector<vector<int> > dp(n+1, vector<int>(n, -1)); //curr n tak jaayegi toh n+1 size // prev ke liye n liya as prev curr ke  piche hi hoga..worst case ek piche..ie n-1 so n ....vse toh index shifting krre toh yeh n tak jaa skti toh n+1 lena chahie par yha base case m hi return hojayega toh not needed...tabu m lena hoga
-//         int ans = solveUsingMem(nums,curr,prev,dp);
-//         return ans;
-//     }
-// };
+    int lengthOfLIS(vector<int>& nums) {
+        int curr = 0; // index
+        int prev = -1; // index
+        int n = nums.size();
+        vector<vector<int> > dp(n+1, vector<int>(n, -1)); //curr n tak jaayegi toh n+1 size // prev ke liye n liya as prev curr ke  piche hi hoga..worst case ek piche..ie n-1 so n ....vse toh index shifting krre toh yeh n tak jaa skti toh n+1 lena chahie par yha base case m hi return hojayega toh not needed...tabu m lena hoga
+        int ans = solveUsingMem(nums,curr,prev,dp);
+        return ans;
+    }
+};
 
 
 
@@ -241,45 +241,45 @@
 
 
 
-class Solution {
-public:
+// class Solution {
+// public:
 
-int longestIncreasingSubsequence(vector<int> &arr)
-{
-    int n = arr.size();
+// int longestIncreasingSubsequence(vector<int> &arr)
+// {
+//     int n = arr.size();
 
    
 
-    vector<int> dp(n, 1);  // dp[i] signifies the length of longest increasing subsequence
-    // starting from index i // initially sabpe 1 rkhge (uske longest subsequence m voh included h filhaal)
+//     vector<int> dp(n, 1);  // dp[i] signifies the length of longest increasing subsequence
+//     // starting from index i // initially sabpe 1 rkhge (uske longest subsequence m voh included h filhaal)
 
-    int maxi = -1; // for ans
+//     int maxi = -1; // for ans
     
-    // moving from right to left
-    for (int i = n - 1; i >= 0; i--)
-    {
-        // check all elements after i
-        for (int next = i + 1; next < n; next++)
-        {
-            if (arr[next] > arr[i])
-            {
-                dp[i] = max(dp[i], 1 + dp[next]);
-            }
-        }
+//     // moving from right to left
+//     for (int i = n - 1; i >= 0; i--)
+//     {
+//         // check all elements after i
+//         for (int next = i + 1; next < n; next++)
+//         {
+//             if (arr[next] > arr[i])
+//             {
+//                 dp[i] = max(dp[i], 1 + dp[next]);
+//             }
+//         }
 
-        maxi = max(maxi, dp[i]);
-    }
+//         maxi = max(maxi, dp[i]);
+//     }
 
-    return maxi;
-}
+//     return maxi;
+// }
 
-int lengthOfLIS(vector<int> &nums)
-{
-    int ans = longestIncreasingSubsequence(nums);
-    return ans;
-}
+// int lengthOfLIS(vector<int> &nums)
+// {
+//     int ans = longestIncreasingSubsequence(nums);
+//     return ans;
+// }
 
-};
+// };
 
 //another variant of lis
 //find lis such that bitwise and of sequence is not 0
@@ -292,46 +292,46 @@ int lengthOfLIS(vector<int> &nums)
 
 
 
-class Solution {
-public:
+// class Solution {
+// public:
 
-        int LIS(vector<int>& num ) {
-        vector<int> ans;
+//         int LIS(vector<int>& num ) {
+//         vector<int> temp;
    
-        ans.push_back(num[0]);  
+//         temp.push_back(num[0]);  
 
-        for(int i=1; i<num.size(); i++) {
-            if(num[i] > ans.back()) {
-                ans.push_back(num[i]);
-            }
-            else {
+//         for(int i=1; i<num.size(); i++) {
+//             if(num[i] > temp.back()) {
+//                 temp.push_back(num[i]);
+//             }
+//             else {
                
-                int index = lower_bound(ans.begin(), ans.end(), num[i]) - ans.begin();
+//                 int index = lower_bound(temp.begin(), temp.end(), num[i]) - temp.begin();
                 
-                ans[index] = num[i];
-            }
-        }
-        return ans.size();
-    }
+//                 temp[index] = num[i];
+//             }
+//         }
+//         return temp.size();
+//     }
 
     
 
-    int longestSubsequence(vector<int>& nums) {
-        int maxi = 0;
+//     int longestSubsequence(vector<int>& nums) {
+//         int maxi = 0;
         
-        for (int b = 0; b <= 31; ++b) {
-            vector<int> newnums;
-            for (int i=0;i<nums.size();i++) {
-                int x=nums[i];
-                if ((x >> b) & 1) {
-                    newnums.push_back(x);
-                }
-            }           
-            if (newnums.size()>0) {
-                maxi = max(maxi,LIS(newnums));
-            }
-        }
+//         for (int b = 0; b <= 31; ++b) {
+//             vector<int> newnums;
+//             for (int i=0;i<nums.size();i++) {
+//                 int x=nums[i];
+//                 if ((x >> b) & 1) {
+//                     newnums.push_back(x);
+//                 }
+//             }           
+//             if (newnums.size()>0) {
+//                 maxi = max(maxi,LIS(newnums));
+//             }
+//         }
         
-        return maxi;
-    }
-};
+//         return maxi;
+//     }
+// };
