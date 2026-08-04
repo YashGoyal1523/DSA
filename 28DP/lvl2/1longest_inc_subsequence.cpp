@@ -229,12 +229,10 @@ public:
 
 
 
-
 // STRIVER
 
 // another tabulation method for length of lis
 
-//note yeh for loop based recursve soln se aata
 
 // tc o(n^2)
 // sc o(n)
@@ -250,8 +248,7 @@ public:
 
    
 
-//     vector<int> dp(n, 1);  // dp[i] signifies the length of longest increasing subsequence
-//     // starting from index i // initially sabpe 1 rkhge (uske longest subsequence m voh included h filhaal)
+//     vector<int> dp(n, 1);  // dp[i] signifies the length of longest increasing subsequence starting from index i ie usko starting value leke // initially sabpe 1 rkhge (uske longest subsequence m voh included h filhaal)
 
 //     int maxi = -1; // for ans
     
@@ -279,7 +276,7 @@ public:
 //     return ans;
 // }
 
-// };
+// }; 
 
 //another variant of lis
 //find lis such that bitwise and of sequence is not 0
