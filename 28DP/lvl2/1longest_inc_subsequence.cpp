@@ -233,41 +233,52 @@
 
 // another tabulation method for length of lis
 
-// class Solution {
-// public:
-
-// int longestIncreasingSubsequence(vector<int> &arr)
-// {
-//     int n = arr.size();
-//     vector<int> dp(n, 1);  // dp[i] signifies the length of longest inc subsequence from starting that ends at element present at i // initially sabpe 1 rkhge (uske longest subsequence m voh included h filhaal)
-//     int maxi = -1; // for ans
-//     for (int i = 0; i < n; i++)
-//     {
-//         for (int prev = 0; prev < i; prev++)
-//         {
-//             if (arr[prev] < arr[i])
-//             {
-//                 dp[i] = max(dp[i], 1 + dp[prev]);
-//             }
-//         }
-//         maxi = max(maxi, dp[i]);
-//     }
-//     return maxi;
-// }
-
-// int lengthOfLIS(vector<int> &nums)
-// {
-//     int ans = longestIncreasingSubsequence(nums);
-//     return ans;
-// }
-// };
-
 
 
 // tc o(n^2)
 // sc o(n)
 
 
+
+class Solution {
+public:
+
+int longestIncreasingSubsequence(vector<int> &arr)
+{
+    int n = arr.size();
+
+   
+
+    vector<int> dp(n, 1);  // dp[i] signifies the length of longest increasing subsequence
+    // starting from index i // initially sabpe 1 rkhge (uske longest subsequence m voh included h filhaal)
+
+    int maxi = -1; // for ans
+    
+    // moving from right to left
+    for (int i = n - 1; i >= 0; i--)
+    {
+        // check all elements after i
+        for (int next = i + 1; next < n; next++)
+        {
+            if (arr[next] > arr[i])
+            {
+                dp[i] = max(dp[i], 1 + dp[next]);
+            }
+        }
+
+        maxi = max(maxi, dp[i]);
+    }
+
+    return maxi;
+}
+
+int lengthOfLIS(vector<int> &nums)
+{
+    int ans = longestIncreasingSubsequence(nums);
+    return ans;
+}
+
+};
 
 //another variant of lis
 //find lis such that bitwise and of sequence is not 0
