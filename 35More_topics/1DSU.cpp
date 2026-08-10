@@ -16,7 +16,7 @@ public:
     int findUPar(int node) {
         if (node == parent[node])
             return node;
-        return parent[node] = findUPar(parent[node]);
+        return parent[node] = findUPar(parent[node]); //path compression krdia
     }
 
     void unionByRank(int u, int v) {
@@ -75,7 +75,7 @@ public:
     int findUPar(int node) {
         if (node == parent[node])
             return node;
-        return parent[node] = findUPar(parent[node]);
+        return parent[node] = findUPar(parent[node]); //path compression krdia
     }
 
     void unionByRank(int u, int v) {
