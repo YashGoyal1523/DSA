@@ -3,7 +3,7 @@
 // //  height and max depth is same thing
 
 
-// // m1 : recursion : sochne/yaad krne  ki approach -> find root node ke left ki height using recursion ,find right ki height using recursion , jo badi usme root node ka +1 krke height of tree milgya
+// // m1 : recursion : sochne/yaad krne  ki approach -> find root node ke left ki height using recursion ,find right ki height using recursion , jo badi usse  height of tree milgya
 
 
 
@@ -13,9 +13,9 @@
 	//     return 0;
 	// }
    
-	// int leftHeight = maxDepth(root->left);
-	// int rightHeight = maxDepth(root->right);     // phle right m jaana baad m left m jaana bhi kr skte
-	// int height = max(leftHeight, rightHeight) + 1;  // +1 for root node
+	// int leftHeight = 1+maxDepth(root->left);
+	// int rightHeight = 1+maxDepth(root->right);     // phle right m jaana baad m left m jaana bhi kr skte
+	// int height = max(leftHeight, rightHeight);  
 	// return height;
 
 // }
@@ -34,7 +34,7 @@
 
 // q.push(root);
 // q.push(NULL);
-// int count=1;
+// int count=0;
 
 // //asli traversal start krete h 
 
@@ -43,9 +43,10 @@
 // 	q.pop();
 
 // 	if(front == NULL) {
+//          count++;
 // 		if(!q.empty()) {
 // 			q.push(NULL);
-//          count++;
+
 // 		}
 // 	}
 // 	else {
@@ -63,3 +64,4 @@
 // return count;
 
 // }
+
