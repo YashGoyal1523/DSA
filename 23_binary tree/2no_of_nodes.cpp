@@ -1,8 +1,8 @@
 // given a binary tree , return no of nodes
 
+//dfs se tree mein traverse kro and count kro
 void countnodes(TreeNode* root, int &count){
-    // pre,in,post koi bhi use kr skte
-    // pre se krte
+
     if(root==NULL){
         return;
     }
