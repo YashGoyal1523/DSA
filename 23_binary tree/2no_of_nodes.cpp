@@ -1,8 +1,9 @@
 // given a binary tree , return no of nodes
 
-//dfs se tree mein traverse kro and count kro
-void countnodes(TreeNode* root, int &count){
+//rec dfs se tree mein traverse kro and count kro
 
+void countnodes(TreeNode* root, int &count){
+    
     if(root==NULL){
         return;
     }
@@ -18,27 +19,28 @@ int NoOfNodes(TreeNode* root){
     return count;
 }
 
-// other method
-
-//nodes=1(count of current node) + nodes(left subtree) + nodes(right subtree)
+// other tarika 
 
 int countnodes(TreeNode* root){
    
     if(root==NULL){
         return 0;
     }
-    
+
+    int cnt=1; // for current node
     int left=countnodes(root->left);
     int right=countnodes(root->right);
 
-    int totalnodes=left+right+1;
+    cnt+=left+right;
     
-    return totalnodes;
+    return cnt;
 
 }
 
 int NoOfNodes(TreeNode* root){
     
     int ans=countnodes(root);
-    return return;
+    return ans;
 }
+//iss wale ko sochne ka other way
+//nodes=1(count of current node) + nodes(left subtree) + nodes(right subtree)
