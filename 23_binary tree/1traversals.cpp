@@ -143,20 +143,9 @@ void levelOrderTraversal(Node *node)
         Node *front = q.front();
         q.pop();
 
-        if (front == NULL)
-        { // null milgya yaani  level khatm hogyaa... next line krooo....
-         //   note level khatm hogya toh uss level ke sab traverse hoke print hogye  hogee and next level ke sab queue mein push hogye hoge (ie queue mein ab next level ke elements pade hai...(pichla front element jisko investigate krre voh pop kr chuke hai)...ie queue ka front is next level ka first and aage saare stored hai level ke).....toh ab next level ke liye checkmark lagado yaani null push krdo firse 
-            if (!q.empty()) // yeh check krlo kya pata khatm hi hogyaa ho tree ...q is empty yaani next line ka kuch push nhi hua toh khatm tree...  
-            {   
-                cout << endl;
-                q.push(NULL);
-                
-            }                           // note agar yeh cout endl first  second if ke bich m likhege toh kuch farak nhi padega bass last mein print hoke next line m jaake end hogaa...abhi usi line m end hora 
-        }
-        else
-        {   // null nhi mila
+        if (front != NULL)
+        { 
             // valid node wala case 
-            // abhi level khatm nhi hua 
             // jaancha hua element print kro and uske left right push krdo
             cout << front->data <<" ";
 
@@ -168,8 +157,21 @@ void levelOrderTraversal(Node *node)
             {
                 q.push(front->right);
             }
+                           
         }
-                                                        // note investigate wale element ko pop krke investigste krree...agar bina krre krtee tohh q.front()->data se jaachte and pop aise krte...if wale mein dono if ke bich m ...and else wale mein cases ke end mein
+        else
+        {   
+             // null milgya yaani  level khatm hogyaa... 
+             //next line krooo....and checkmark push krdo next level ke liye (//   note level khatm hogya toh uss level ke sab traverse hoke print hogye  hogee and next level ke sab queue mein push hogye hoge (ie queue mein ab next level ke elements pade hai....ie queue ka front is next level ka first and aage saare stored hai level ke).....toh ab next level ke liye checkmark lagado yaani null push krdo firse )
+         
+            if (!q.empty()) // yeh check krlo kya pata khatm hi hogyaa ho tree ...q is empty yaani next line ka kuch push nhi hua toh khatm tree...  
+            {   
+                cout << endl;
+                q.push(NULL);
+                
+            }      
+        }
+                                                   
     }
 }
 int main()
@@ -200,31 +202,3 @@ int main()
 
 // tc : o(n) ;n : nodes,    sc:o(1):if recursive stack ignored and o(h); h : height if not ignored(recusive stack m max fn ..height jitne hoge at an instance).... of pre in post sc
 // tc : o(n) , sc: o(x); x: nodes in level with max nodes..(queue mein max elements uss max level wale nodes jitne hoge at an instance)
-
-//  note : yaha para
-
-// iski jagah 
-
-//  if(front==null){
-//     if(!q.empty(){
-
-//     }
-//  }
-//  else {
-
-//  }
-
-// yeh nhi use kr skte
-
-// if(front==null&&!q.empty()){
-
-// }
-
-// else{
-
-// }
-
-// as jab null waali satisfy ho and empty wali nhi (ie last mein) tab hume aage bhadhna...par second wale mein iss condition mein else chaljayega :)
-
-
-// dfs traversal bhi hota h ek
