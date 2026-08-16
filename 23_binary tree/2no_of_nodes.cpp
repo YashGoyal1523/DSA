@@ -42,5 +42,5 @@ int NoOfNodes(TreeNode* root){
     int ans=countnodes(root);
     return ans;
 }
-//iss wale ko sochne ka other way
-//nodes=1(count of current node) + nodes(left subtree) + nodes(right subtree)
+//iss recursion ko sochne ka proper way is dfs se traverse krna and count krna par dusra sochne ka way
+//nodes=1(root node) + nodes(left subtree) + nodes(right subtree)
