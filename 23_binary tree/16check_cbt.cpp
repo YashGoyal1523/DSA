@@ -3,6 +3,8 @@
 
 //non null node ke left mein null nhi honi chahie
 
+//level order se krlo
+
 class Solution {
 public:
 
