@@ -58,6 +58,39 @@ public:
 
 //optimal
 
+list in C++ STL is a doubly linked list.
+
+Function / Operation              Time Complexity
+-------------------------------------------------
+push_front()                      O(1)
+push_back()                       O(1)
+pop_front()                       O(1)
+pop_back()                        O(1)
+
+insert(iterator, value)           O(1)
+erase(iterator)                   O(1)
+
+front()                           O(1)
+back()                            O(1)
+
+begin()                           O(1)
+end()                             O(1)
+
+size()                            O(1)
+empty()                           O(1)
+
+find()                            O(N)
+search for a value                O(N)
+
+Access by index list[i]           NOT supported
+Random access                     O(N) if traversing
+
+clear()                           O(N)
+
+remove(value)                     O(N)
+reverse()                         O(N)
+sort()                            O(N log N)
+
 class LRUCache {
 public:
     list<int> dll; //it contains the key
@@ -147,6 +180,11 @@ public:
     }
 };
 
+Implementation                      get()          put()          Space
+----------------------------------------------------------------
+Vector                              O(N)           O(N)           O(N)
+Map + DLL                          O(log N)       O(log N)       O(N)
+Unordered Map + DLL                O(1) avg       O(1) avg       O(N)
 
 
 //striver
@@ -222,6 +260,34 @@ class LRUCache {
     m[key_] = head -> next;
   }
 };
-// Time Complexity:O(N)
 
-// Space Complexity:O(1)
+
+Function / Operation             Time Complexity
+-------------------------------------------------
+LRUCache(capacity)               O(1)
+
+addnode(node*)                   O(1)
+deletenode(node*)                O(1)
+
+get(key)                         O(1) average
+put(key, value)                  O(1) average
+
+unordered_map::find()            O(1) average
+unordered_map::erase()           O(1) average
+unordered_map::operator[]        O(1) average
+
+Space Complexity                 O(N)
+-------------------------------------------------
+
+Why get() = O(1)?
+- unordered_map finds node        → O(1) avg
+- erase from DLL                  → O(1)
+- add to front of DLL             → O(1)
+- update map                      → O(1) avg
+
+Why put() = O(1)?
+- find existing key               → O(1) avg
+- delete existing node             → O(1)
+- remove LRU node if full          → O(1)
+- add new node to front            → O(1)
+- update map                       → O(1) avg
