@@ -4,6 +4,7 @@
 // https://youtu.be/81h8O-0U5oo?si=PNt_8mbNiEz8cPPE
 
 //bruteforce
+//vector
 
 class LRUCache {
 public:
@@ -58,6 +59,8 @@ public:
 
 //optimal
 
+//map+dll
+
 list in C++ STL is a doubly linked list.
 
 Function / Operation              Time Complexity
@@ -94,7 +97,7 @@ sort()                            O(N log N)
 class LRUCache {
 public:
     list<int> dll; //it contains the key
-    map<int, pair<list<int>::iterator, int>> cache; //key->(list_node, value)
+    map<int, pair<list<int>::iterator, int>> cache; //key->(list_node, value) 
     int capacity;
     
     LRUCache(int capacity) {
@@ -180,11 +183,46 @@ public:
     }
 };
 
-Implementation                      get()          put()          Space
-----------------------------------------------------------------
-Vector                              O(N)           O(N)           O(N)
-Map + DLL                          O(log N)       O(log N)       O(N)
-Unordered Map + DLL                O(1) avg       O(1) avg       O(N)
+
+Let N = cache capacity.
+
+Implementation                  get()          put()          Space
+-----------------------------------------------------------------------
+Vector<pair<int,int>>            O(N)           O(N)           O(N)
+
+map + list                       O(log N)       O(log N)       O(N)
+
+unordered_map + list             O(1) avg       O(1) avg       O(N)
+
+-----------------------------------------------------------------------
+
+
+Why?
+
+VECTOR
+- Search key                  → O(N)
+- erase from vector           → O(N)
+- push_back                   → O(1) amortized
+- Overall get/put             → O(N)
+
+
+MAP + LIST
+- map::count/find             → O(log N)
+- map::operator[]             → O(log N)
+- map::erase                  → O(log N)
+- list::erase(iterator)       → O(1)
+- list::push_front()          → O(1)
+- list::pop_back()            → O(1)
+- Overall get/put             → O(log N)
+
+
+UNORDERED_MAP + LIST
+- unordered_map lookup        → O(1) average
+- unordered_map erase         → O(1) average
+- list::erase(iterator)       → O(1)
+- list::push_front()          → O(1)
+- list::pop_back()            → O(1)
+- Overall get/put             → O(1) average
 
 
 //striver
