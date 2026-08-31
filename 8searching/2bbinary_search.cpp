@@ -49,5 +49,20 @@ int main()
 return 0;
 } 
 //need sorted array (either ascending or descending) for binary search
-//  tc=logn.....(proof: n/2^k=1)
+
+//  tc=logn.....(base 2 hai)
+// proof:  step 0 ->n
+//         step 1 ->n/2
+//         step 2 ->n/4
+//         step 3 ->n/8
+//         step 4 ->n/16
+//         ......
+//         step k ->n/(2^k) = 1 
+
+//        => n/(2^k)=1 => n=2^k =>  log(n)=k
+//         total steps = k+1 = log(n)+1
+//         so time complexity = o(log(n)+1) ~ o(log(n))
+
+// sc=1
+
 // if start==end...means single element present    
