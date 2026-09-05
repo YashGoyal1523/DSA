@@ -10,11 +10,11 @@ using namespace std ;
 // normal method to find gc
 int gcd_1(int a,int b){
     int smaller=min(a,b);
-    int greater=max(a,b);
     int ans=0;
-    for(int i=1;i<=smaller;i++){
-        if(smaller%i==0&&greater%i==0){
+    for(int i=smaller;i>=1;i--){
+        if(a%i==0&&b%i==0){
              ans=i;
+             break;
         }
     }
     return ans;
@@ -59,5 +59,3 @@ return 0;
 
 
 // gcd(x, y, z) = gcd(gcd(x, y), gcd(y, z))
-
-
