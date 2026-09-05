@@ -74,7 +74,7 @@ public:
 //     }
 // }
 
-//for this -> o(nlogn) worst case (all elements are distinct)
+//for this -> o(nlogn) worst case (all elements are distinct..sab 1 freq wale index pe ikhatha hogye...sorting takes nlogn)
 
 //so overall tc ->o(nlogn) worst case
 
