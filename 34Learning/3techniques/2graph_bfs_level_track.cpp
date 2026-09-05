@@ -7,7 +7,7 @@ int bfs(vector<vector<int>>&adj,int n,int node){
         q.push(node);
         vis[node]=1;
 
-        int level=1;
+        int level=0;
         while(!q.empty()){
             int size=q.size();
             while(size--){ //iss level ke saare nodes queue m h // level wise krne k liye
@@ -22,8 +22,7 @@ int bfs(vector<vector<int>>&adj,int n,int node){
             }
             level++;
         }
-        //ek extra level add hojayega
-
-        return level-1;
+      
+        return level;
 
     }
