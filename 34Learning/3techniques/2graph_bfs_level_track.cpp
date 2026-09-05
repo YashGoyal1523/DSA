@@ -26,3 +26,7 @@ int bfs(vector<vector<int>>&adj,int n,int node){
         return level;
 
     }
+
+
+ // we can use checkmark approach also that we did in level order traversal of binary tree
+ // similalry in level order traversal of binary tree we can use this queue size approach also 
