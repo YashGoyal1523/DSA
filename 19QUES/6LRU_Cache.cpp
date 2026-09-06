@@ -6,6 +6,10 @@
 //bruteforce
 //vector
 
+cache.begin()                         cache.end()
+     ↓                                    ↓
+   [LRU] → [ ... ] → [ ... ] → [MRU]
+
 class LRUCache {
 public:
     
@@ -61,6 +65,7 @@ public:
 
 //map+dll
 
+
 list in C++ STL is a doubly linked list.
 
 Function / Operation              Time Complexity
@@ -93,6 +98,12 @@ clear()                           O(N)
 remove(value)                     O(N)
 reverse()                         O(N)
 sort()                            O(N log N)
+
+
+
+front                              back
+ ↓                                  ↓
+[MRU] → [ ... ] → [ ... ] → [LRU]
 
 class LRUCache {
 public:
@@ -138,6 +149,10 @@ public:
 
 // or
 //list mein hi key,value store krlo
+
+front                              back
+ ↓                                  ↓
+[MRU] → [ ... ] → [ ... ] → [LRU]
 
 class LRUCache {
 public:
@@ -227,6 +242,10 @@ UNORDERED_MAP + LIST
 
 //striver
 // https://youtu.be/z9bJUPxzFOw?si=HIWgqf3UbIzAj_iT
+
+front                              back
+ ↓                                  ↓
+[MRU] → [ ... ] → [ ... ] → [LRU]
 
 class LRUCache {
   public:
