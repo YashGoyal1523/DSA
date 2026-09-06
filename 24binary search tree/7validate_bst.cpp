@@ -2,7 +2,7 @@
 
 // for a node
 // if node lies in valid range
-// valid range- for root node: [int min ,int max] (given node value lies in [intmin,intmax]), for its children : if its left child then [int min , parent) , if its right child then (parent ,int max] ....so on
+// valid range- for a node: [lowerbound ,upperbound] (root node -> [intmin,intmax] ...given node value lies in [intmin,intmax]), for its children : if its left child then [lowerbound, node) , if its right child then (node ,uperbound] 
 // node ka left subtree is bst 
 // node ka right subtree is bst 
 // node se bst h
