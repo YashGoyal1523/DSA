@@ -5,6 +5,7 @@
 // lcm*gcd=a*b -> lcm=a*b/gcd  find gcd using euclid
 
  //m2
+ //greater ke multiples check krte jao until smallest se divisible ho jaye
 // int LCM(int a, int b)
 // {   
 //     int ans=-1;
