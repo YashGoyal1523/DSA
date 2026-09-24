@@ -7,3 +7,5 @@
 // new index = index-k>=0?index-k:index-k+n (k<n hona chahie ...k=k%n krlena)
 //or
 // new index= (index - k + n)%n (k<n hona chahie ...k=k%n krlena)
+//or
+//new index = ((index - k) % n + n) % n;  (k<n ki esi koi need nhi hai)
