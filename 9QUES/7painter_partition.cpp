@@ -1,6 +1,7 @@
 // The Painter's Partition Problem
 
-//https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
+//https://www.naukri.com/code360/problems/painter-s-partition-problem_1089557?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+
 
 //striver
 
