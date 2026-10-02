@@ -6,8 +6,8 @@
 //bruteforce
 //vector
 
-cache.begin()                         cache.end()
-     ↓                                    ↓
+cache.begin()                   cache.end()
+     ↓                           ↓
    [LRU] → [ ... ] → [ ... ] → [MRU]
 
 class LRUCache {
@@ -101,8 +101,8 @@ sort()                            O(N log N)
 
 
 
-front                              back
- ↓                                  ↓
+front                          back
+ ↓                              ↓
 [MRU] → [ ... ] → [ ... ] → [LRU]
 
 class LRUCache {
@@ -150,8 +150,8 @@ public:
 // or
 //list mein hi key,value store krlo
 
-front                              back
- ↓                                  ↓
+front                          back
+ ↓                              ↓
 [MRU] → [ ... ] → [ ... ] → [LRU]
 
 class LRUCache {
@@ -243,9 +243,9 @@ UNORDERED_MAP + LIST
 //striver
 // https://youtu.be/z9bJUPxzFOw?si=HIWgqf3UbIzAj_iT
 
-front                              back
- ↓                                  ↓
-[MRU] → [ ... ] → [ ... ] → [LRU]
+              front                          back
+               ↓                              ↓
+dummy head -> [MRU] → [ ... ] → [ ... ] → [LRU] -> dummy tail
 
 class LRUCache {
   public:
